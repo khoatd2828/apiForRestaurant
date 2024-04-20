@@ -31,12 +31,26 @@ export default class order_restaurant extends Model {
     arr_sub_id: {
       type: DataTypes.STRING(255),
       allowNull: false
+    },
+    orders_id: {
+      autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true
     }
   }, {
     sequelize,
     tableName: 'order_restaurant',
     timestamps: false,
     indexes: [
+      {
+        name: "PRIMARY",
+        unique: true,
+        using: "BTREE",
+        fields: [
+          { name: "orders_id" },
+        ]
+      },
       {
         name: "user_id",
         using: "BTREE",
