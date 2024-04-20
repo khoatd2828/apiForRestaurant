@@ -1,0 +1,11 @@
+{
+    "development": {
+      "username": "root",
+      "password": "1234",
+      "database": "restaurant_system",
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "port": "3306"
+    }
+}
+  
